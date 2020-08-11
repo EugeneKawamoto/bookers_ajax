@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :books
   # get 'users/show'
   devise_for :users
   root 'books#top'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :users, only: [:show, :edit]
+  resources :books, only: [:index, :show, :edit]
+  resources :users, only: [:index, :show, :edit]
 end

@@ -3,16 +3,19 @@
 <table>
   <tr>
     <th>Name</th>
-    <td><%= f.text_field :name, autofocus: true, class:"form-control", placeholder:"Name"%></td>
+    <td><%= f.text_field :name, autofocus: true, class:"form-control" %></td>
   </tr>
   <tr>
     <th>Image</td>
-    <td><%= attachment_image_tag @user, :profile_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb", fallback: "no_image.jpg"%></td>
-    <td><%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
-</td>
+  </tr>
+  <tr>
+    <td><%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %></td>
   </tr>
   <tr>
     <th>Introduction<th>
-    <td><%= f.text_field :introduction, autofocus: true, class:"form-control", placeholder:"Inrtoduction"%></td>
+    <td><%= f.text_field :introduction, autofocus: true, class:"form-control" %></td>
   </tr>
-  <%= f.submit "変更を保存", class:"btn" %>
+  <tr>
+    <td><%= f.submit "Update User", class:"btn" %></td>
+  </tr>
+<% end %>

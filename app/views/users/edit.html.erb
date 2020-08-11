@@ -1,13 +1,18 @@
 <h1>User Info</h1>
+<%= form_for(@user) do |f| %>
 <table>
   <tr>
     <th>Name</th>
-    <td>name</td>
+    <td><%= f.text_field :name, autofocus: true, class:"form-control", placeholder:"Name"%></td>
   </tr>
-  <th>Image</td>
-  <td>ファイルを選択</td>
+  <tr>
+    <th>Image</td>
+    <td><%= attachment_image_tag @user, :profile_image, :fill, 60, 60, class: "img-circle pull-left profile-thumb", fallback: "no_image.jpg"%></td>
+    <td><%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
+</td>
+  </tr>
   <tr>
     <th>Introduction<th>
-    <td>introduction</td>
+    <td><%= f.text_field :introduction, autofocus: true, class:"form-control", placeholder:"Inrtoduction"%></td>
   </tr>
-  <a href="#">Update User</a>
+  <%= f.submit "変更を保存", class:"btn" %>

@@ -1,15 +1,19 @@
 class BooksController < ApplicationController
   before_action :authenticate_user!
+
   def top
+  end
+
+  def new
+  end
+
+  def create
   end
 
   def index
   end
 
   def show
-  end
-
-  def new
   end
 
   def edit

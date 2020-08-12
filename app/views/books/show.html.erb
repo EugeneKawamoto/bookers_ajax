@@ -4,9 +4,13 @@
     </div>
   <% end %>
 
-<%= render 'users/sidemenu', user: @user, book: @book %>
-
-  <p><strong>Tilte:</strong>
-    <%= @book.title %></p>
-  <p><strong>Body:</strong>
-    <%= @book.body %>
+<%= render 'users/sidemenu', user: @book_show.user, book: @book %>
+<h1>Book detail</h1>
+<table>
+  <tr>
+    <td><%= @book_show.title %></td>
+    <td><%= @book_show.body %><td>
+    <td><%= link_to 'Edit', edit_book_path(@book_show.id) %></td>
+    <td><%= link_to 'Destroy', book_path(@book_show.id), method: :delete, "data-confirm" => "本当に消しますか?" %></td>
+  </tr>
+</table>

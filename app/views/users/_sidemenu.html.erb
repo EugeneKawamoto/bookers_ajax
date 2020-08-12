@@ -3,11 +3,11 @@
   <td><%= attachment_image_tag user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></td>
   <tr>
     <th>name</th>
-    <td><%= current_user.name %></td>
+    <td><%= user.name %></td>
   </tr>
   <tr>
     <th>introduction</th>
-    <td><%= current_user.introduction %></td>
+    <td><%= user.introduction %></td>
   </tr>
   <tr>
     <td><%= link_to "editbutton", edit_user_path(user.id) %></td>

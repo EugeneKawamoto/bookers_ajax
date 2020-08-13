@@ -18,12 +18,6 @@
               <%# <%= image_tag('logo.png') %>
             </a>
 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
           </div>
           <div id="slidemenu">
             <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
@@ -59,6 +53,10 @@
         </div>
       </nav>
     </div>
+
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "#{key}") %>
+  <% end %>
     <%= yield %>
   </body>
   <footer><small>CopyRight Infratop.inc</small></footer>

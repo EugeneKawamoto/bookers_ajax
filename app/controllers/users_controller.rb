@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   before_action :redirect_root
+
   def index
+    @book = Book.new
+    @users = User.all
   end
 
   def show

@@ -1,17 +1,22 @@
-<%= render 'sidemenu',user: current_user, book: @book %>
-
-<h1>Users</h1>
-  <table>
-    <tr>
-      <th>image</th>
-      <th>name</th>
-      <th></th>
-    </tr>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= attachment_image_tag user, :profile_image, :fill, 40, 40, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></td>
-        <td><%= user.name %></td>
-        <td><%= link_to 'show', user_path(user.id) %></td>
-      </tr>
-    <% end %>
-  </table>
+<div class="container">
+  <div class="row">
+    <%= render 'sidemenu',user: current_user, book: @book %>
+    <div class="col-lg-8">
+      <h1>Users</h1>
+      <table class="table table-striped">
+        <tr>
+          <th>image</th>
+          <th>name</th>
+          <th></th>
+        </tr>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= attachment_image_tag user, :profile_image, :fill, 40, 40, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></td>
+            <td><%= user.name %></td>
+            <td><%= link_to 'show', user_path(user.id) %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

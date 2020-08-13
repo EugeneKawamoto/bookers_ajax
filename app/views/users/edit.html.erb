@@ -1,21 +1,22 @@
 <h1>User Info</h1>
 <%= form_for(@user) do |f| %>
-<table>
-  <tr>
-    <th>Name</th>
-    <td><%= f.text_field :name, autofocus: true, class:"form-control" %></td>
-  </tr>
-  <tr>
-    <th>Image</td>
-  </tr>
-  <tr>
-    <td><%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %></td>
-  </tr>
-  <tr>
-    <th>Introduction<th>
-    <td><%= f.text_field :introduction, autofocus: true, class:"form-control" %></td>
-  </tr>
-  <tr>
-    <td><%= f.submit "Update User", class:"btn" %></td>
-  </tr>
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <td><%= f.text_field :name, autofocus: true, class:"form-control" %></td>
+    </tr>
+    <tr>
+      <th>Image</td>
+    </tr>
+    <tr>
+      <td><%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %></td>
+    </tr>
+    <tr>
+      <th>Introduction<th>
+      <td><%= f.text_field :introduction, autofocus: true, class:"form-control" %></td>
+    </tr>
+    <tr>
+      <td><%= f.submit "Update User", class:"btn" %></td>
+    </tr>
+  </table>
 <% end %>

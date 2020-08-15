@@ -1,5 +1,5 @@
 
-  <div class="col-lg-4" style="background-color: white;">
+  <div class="col-xs-3" style="background-color: white;">
     <h1>User Info</h1>
     <table class="table table-striped">
       <td><%= attachment_image_tag user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></td>
@@ -11,22 +11,22 @@
         <th>introduction</th>
         <td><%= user.introduction %></td>
       </tr>
-      <tr>
-        <td><%= link_to "", edit_user_path(user.id), class:"glyphicon glyphicon-wrench" %></td>
-      </tr>
     </table>
+      <div class="row">
+        <%= link_to "", edit_user_path(user.id), class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
+      </div>
     <h1>New Book</h1>
     <%= form_for book do |f| %>
-      <div class="field">
+      <div class="field row">
         <label for="book_title">Title</label>
         <%= f.text_field :title %>
       </div>
-      <div class="field">
+      <div class="field row">
         <label for="book_body">Opinion</label>
         <%= f.text_area :body %>
       </div>
-      <div class="actions">
-        <%= f.submit 'Create Book' %>
+      <div class="actions row">
+        <%= f.submit 'Create Book', class:"btn btn-primary col-xs-12" %>
       </div>
     <% end %>
   </div>

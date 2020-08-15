@@ -16,3 +16,26 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+header .navbar-left span{
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+}
+
+.btn-wrapper {
+  color:#333
+}

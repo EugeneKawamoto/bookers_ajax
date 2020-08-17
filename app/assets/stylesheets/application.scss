@@ -49,6 +49,29 @@ h1 .h1 {
   font-size: 36px;
 }
 
-div {
-  display: block;
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:active {
+  background-color: transparent;
+}
+a:visited {
+  color: #666;
+}
+
+.field, .actions {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }

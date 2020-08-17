@@ -2,10 +2,10 @@
   <div class="row">
     <h2>User info</h2>
     <div class="col-xs-3">
-      <% if @book.errors.any? %>
+      <% if @user.errors.any? %>
         <div id="error_explanation" class="alert alert-danger">
           <ul>
-            <% @book.errors.full_messages.each do |message| %>
+            <% @user.errors.full_messages.each do |message| %>
               <li><%= message +"error" %></li>
             <% end %>
           </ul>

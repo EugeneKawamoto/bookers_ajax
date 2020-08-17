@@ -7,8 +7,10 @@
         <tr>
           <td><%= @book_show.title %></td>
           <td><%= @book_show.body %><td>
-          <td><%= link_to 'Edit', edit_book_path(@book_show.id) %></td>
-          <td><%= link_to 'Destroy', book_path(@book_show.id), method: :delete, "data-confirm" => "本当に消しますか?" %></td>
+          <% if user_signed_in? && current_user.id == @book_show.user_id %>
+            <td><%= link_to 'Edit', edit_book_path(@book_show.id) %></td>
+            <td><%= link_to 'Destroy', book_path(@book_show.id), method: :delete, "data-confirm" => "本当に消しますか?" %></td>
+          <% end %>
         </tr>
       </table>
     </div>

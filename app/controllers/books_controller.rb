@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
-  before_action :redirect_root, except: [:top, :about]
+  before_action :authenticate_user!, except: [:top, :about]
+
   def top
   end
 

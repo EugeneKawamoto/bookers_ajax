@@ -15,7 +15,7 @@
       <div class="navbar navbar-fixed-top navbar-inverse" >
         <div class="container">
           <nav class="nav navbar-nav navbar-left">
-            <span class="text-white">Bookers2</span>
+            <span>Bookers2</span>
           </nav>
           <nav>
             <ul class="nav navbar-nav navbar-right">
@@ -30,7 +30,7 @@
                   <%= link_to ' Books', books_path, class:"glyphicon glyphicon-book" %>
                 </li>
                 <li class="">
-                  <%= link_to " log out", destroy_user_session_path, method: :delete, class:"glyphicon glyphicon-log-out" %>
+                  <%= link_to " logout", destroy_user_session_path, method: :delete, class:"glyphicon glyphicon-log-out" %>
                 </li>
               <% else %>
                 <li class="">

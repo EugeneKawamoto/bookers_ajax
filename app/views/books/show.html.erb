@@ -5,9 +5,11 @@
       <h1>Book detail</h1>
       <table class="table">
         <tr>
+          <td><%= attachment_image_tag @book_show.user , :profile_image, :fill, 40, 40, format: 'jpeg', class: "profile-img", fallback: "no_image.jpg" %>
+          <br/><%= link_to @book_show.user.name, user_path(@book_show.user) %></td>
           <td><%= @book_show.title %></td>
           <td><%= @book_show.body %><td>
-          <% if user_signed_in? && current_user.id == @book_show.user_id %>
+          <% if current_user.id == @book_show.user_id %>
             <td><%= link_to 'Edit', edit_book_path(@book_show.id) %></td>
             <td><%= link_to 'Destroy', book_path(@book_show.id), method: :delete, "data-confirm" => "本当に消しますか?" %></td>
           <% end %>

@@ -52,12 +52,17 @@ h1 .h1 {
 a {
   color: #337ab7;
   text-decoration: none;
-}
-a:active {
   background-color: transparent;
 }
 a:visited {
   color: #666;
+}
+
+.notice {
+  color: green;
+}
+th {
+  text-align: left;
 }
 
 .field, .actions {
@@ -74,4 +79,6 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  overflow: auto;
 }
+

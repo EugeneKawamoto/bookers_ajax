@@ -12,7 +12,7 @@
     <%= form_for @user do |f| %>
       <div class="field">
         <label for="user_name">Name</label>
-        <%= f.text_field :name, autofocus: true, class:"form-control　form-inline" %>
+        <%= f.text_field :name, class:"form-control　form-inline" %>
       </div>
       <div class="field">
         <label for="user_image">Image</label>
@@ -20,7 +20,7 @@
       </div>
       <div class="field">
         <label for="user_introduction">Introduction</label>
-        <%= f.text_area :introduction, autofocus: true, class:"form-control form-inline col-xs-12" %>
+        <%= f.text_area :introduction, class:"form-control" %>
       </div>
       <div class="actions">
         <%= f.submit "Update User", class:"btn" %>

@@ -14,10 +14,8 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-    if current_user.id == @user.id
-      render action: :edit
-    else
-      redirect_to user_path(@user.id)
+    unless current_user.id == @user.id
+      redirect_to user_path(current_user.id)
     end
   end
 

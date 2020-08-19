@@ -2,7 +2,7 @@
     <div id="error_explanation" class="alert alert-danger">
       <ul>
         <% @book.errors.full_messages.each do |message| %>
-          <li><%= message +"error" %></li>
+          <li><%= message %></li>
         <% end %>
       </ul>
     </div>
@@ -11,7 +11,7 @@
   <div class="row">
   <%= render 'users/sidebar', user: current_user, book: @book %>
     <div class="col-xs-9">
-    <h1>Books</h1>
+    <h2>Books</h2>
       <table class="table table-hover table-inverse" >
         <tr>
           <th></th>

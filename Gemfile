@@ -70,3 +70,6 @@ gem 'pry-byebug'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
+
+gem 'devise-i18n'
+gem 'devise-i18n-views'

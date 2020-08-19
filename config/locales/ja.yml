@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        book:
+          attributes:
+            title:
+              blank: "が入力されていません。"
+            body:
+              blank: "が入力されていません。"
+    models:
+      book: "本"
+    attributes:
+      book:
+        title: "本のタイトル"
+        body: "個人の感想"

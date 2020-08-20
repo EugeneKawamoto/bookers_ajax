@@ -52,11 +52,12 @@ class BooksController < ApplicationController
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
-      flash[:notice] = "Book was successfully destroyed."
-      redirect_to books_path
+    flash[:notice] = "Book was successfully destroyed."
+    redirect_to books_path
   end
 
   private
+
   def book_params
     params.require(:book).permit(:title, :body, :user_id)
   end
@@ -64,5 +65,4 @@ class BooksController < ApplicationController
   def redirect_root
     redirect_to root_path unless user_signed_in?
   end
-
 end

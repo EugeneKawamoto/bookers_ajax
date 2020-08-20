@@ -33,6 +33,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
     params.require(:user).permit(:name, :profile_image, :introduction)
   end
@@ -40,5 +41,4 @@ class UsersController < ApplicationController
   def redirect_root
     redirect_to root_path unless user_signed_in?
   end
-
 end

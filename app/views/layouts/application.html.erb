@@ -54,12 +54,16 @@
     </nav>
   </header>
 
-  <% flash.each do |key, value| %>
-    <%= content_tag(:div, value, class: "#{key}") %>
-  <% end %>
-    <%= yield %>
-  <footer>
-    <div class="conteainer">
+  <div class="conteainer">
+    <div class="row">
+      <div class="col-xs-11 col-xs-offset-1">
+        <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, class: "#{key}") %>
+        <% end %>
+      </div>
+    </div>
+          <%= yield %>
+        <footer>
       <div class="row">
         <div class="col-xs-3 col-xs-offset-9">
           <p>CopyRight Infratop.inc</p>

@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'search/search'
   devise_for :users
   root 'books#top'
   get '/home/about', to: 'books#about'
+  get '/search' => 'search#search'
+  get '/search' => 'search#index'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users, only: [:index, :show, :edit, :update] do
     resource :relationships, only: [:create, :destroy]
